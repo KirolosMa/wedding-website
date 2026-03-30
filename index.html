@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed & Sara - Wedding Invitation</title>
+    <meta name="description" content="You are cordially invited to the wedding celebration of Ahmed & Sara">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== COVER / ENVELOPE PAGE ===== -->
+    <div id="cover" class="cover">
+        <div class="cover-language-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+
+        <div class="cover-content">
+            <div class="cover-ornament top"></div>
+
+            <p class="cover-subtitle" data-en="A SPECIAL INVITATION FOR" data-ar="دعوة خاصة لحضور">A SPECIAL INVITATION FOR</p>
+
+            <h2 class="cover-guest" data-en="Guest" data-ar="الضيف الكريم">Guest</h2>
+
+            <div class="cover-divider">
+                <span class="divider-line"></span>
+                <span class="divider-diamond">◆</span>
+                <span class="divider-line"></span>
+            </div>
+
+            <p class="cover-invite" data-en="YOU'RE INVITED" data-ar="أنتم مدعوون">YOU'RE INVITED</p>
+
+            <h1 class="cover-title" data-en="Wedding Celebration" data-ar="حفل زفاف">Wedding Celebration</h1>
+
+            <div class="cover-heart">♥</div>
+
+            <button id="openBtn" class="cover-open-btn" data-en="TAP TO OPEN" data-ar="اضغط للفتح">
+                TAP TO OPEN
+            </button>
+
+            <div class="cover-ornament bottom"></div>
+        </div>
+
+        <div class="cover-particles" id="coverParticles"></div>
+    </div>
+
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="mainContent" class="main-content hidden">
+
+        <!-- Background Music Toggle -->
+        <button id="musicToggle" class="music-toggle" aria-label="Toggle music">
+            <span class="music-icon">♪</span>
+        </button>
+
+        <!-- Language Toggle (inside main) -->
+        <div class="main-language-toggle">
+            <button class="lang-btn-main active" data-lang="en">EN</button>
+            <button class="lang-btn-main" data-lang="ar">عربي</button>
+        </div>
+
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-subtitle" data-en="THE WEDDING OF" data-ar="حفل زفاف">THE WEDDING OF</p>
+                <h1 class="hero-names">
+                    <span class="groom-name">Ahmed</span>
+                    <span class="ampersand">&</span>
+                    <span class="bride-name">Sara</span>
+                </h1>
+                <div class="hero-date-badge">
+                    <span class="hero-date" data-en="May 8, 2026" data-ar="٨ مايو ٢٠٢٦">May 8, 2026</span>
+                    <span class="hero-location" data-en="Cairo, Egypt" data-ar="القاهرة، مصر">Cairo, Egypt</span>
+                </div>
+                <div class="scroll-indicator">
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== COUNTDOWN SECTION ===== -->
+        <section class="countdown-section" id="countdown">
+            <div class="container">
+                <h2 class="section-title" data-en="Counting Down To Our Day" data-ar="العد التنازلي ليومنا">Counting Down To Our Day</h2>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">000</span>
+                        <span class="countdown-label" data-en="Days" data-ar="يوم">Days</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label" data-en="Hours" data-ar="ساعة">Hours</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label" data-en="Minutes" data-ar="دقيقة">Minutes</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label" data-en="Seconds" data-ar="ثانية">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== OUR STORY SECTION ===== -->
+        <section class="story-section" id="story">
+            <div class="container">
+                <h2 class="section-title" data-en="Our Love Story" data-ar="قصة حبنا">Our Love Story</h2>
+                <div class="story-timeline">
+                    <div class="story-item" data-aos="fade-right">
+                        <div class="story-icon">💫</div>
+                        <div class="story-date" data-en="January 2022" data-ar="يناير ٢٠٢٢">January 2022</div>
+                        <h3 class="story-heading" data-en="First Meeting" data-ar="اللقاء الأول">First Meeting</h3>
+                        <p class="story-text" data-en="We met at a friend's gathering in Cairo. From the first conversation, we knew there was something special between us." data-ar="التقينا في تجمع أصدقاء في القاهرة. من أول محادثة، عرفنا أن هناك شيئاً مميزاً بيننا.">We met at a friend's gathering in Cairo. From the first conversation, we knew there was something special between us.</p>
+                    </div>
+                    <div class="story-item" data-aos="fade-left">
+                        <div class="story-icon">☕</div>
+                        <div class="story-date" data-en="March 2022" data-ar="مارس ٢٠٢٢">March 2022</div>
+                        <h3 class="story-heading" data-en="First Date" data-ar="أول موعد">First Date</h3>
+                        <p class="story-text" data-en="Our first date was at a cozy café overlooking the Nile. We talked for hours and lost track of time." data-ar="كان أول موعد لنا في مقهى مطل على النيل. تحدثنا لساعات ونسينا الوقت.">Our first date was at a cozy café overlooking the Nile. We talked for hours and lost track of time.</p>
+                    </div>
+                    <div class="story-item" data-aos="fade-right">
+                        <div class="story-icon">✈️</div>
+                        <div class="story-date" data-en="December 2023" data-ar="ديسمبر ٢٠٢٣">December 2023</div>
+                        <h3 class="story-heading" data-en="Travels Together" data-ar="سافرنا معاً">Travels Together</h3>
+                        <p class="story-text" data-en="We explored new places together and discovered that our love grows stronger with every adventure." data-ar="استكشفنا أماكن جديدة معاً واكتشفنا أن حبنا يزداد قوة مع كل مغامرة.">We explored new places together and discovered that our love grows stronger with every adventure.</p>
+                    </div>
+                    <div class="story-item" data-aos="fade-left">
+                        <div class="story-icon">💍</div>
+                        <div class="story-date" data-en="September 2025" data-ar="سبتمبر ٢٠٢٥">September 2025</div>
+                        <h3 class="story-heading" data-en="The Proposal" data-ar="طلب الزواج">The Proposal</h3>
+                        <p class="story-text" data-en="Under the stars by the pyramids, Ahmed asked Sara to spend forever together. She said yes!" data-ar="تحت النجوم بجانب الأهرام، طلب أحمد من سارة أن يقضيا العمر معاً. قالت نعم!">Under the stars by the pyramids, Ahmed asked Sara to spend forever together. She said yes!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== EVENT DETAILS SECTION ===== -->
+        <section class="events-section" id="events">
+            <div class="container">
+                <h2 class="section-title" data-en="Wedding Events" data-ar="فعاليات الزفاف">Wedding Events</h2>
+
+                <div class="events-grid">
+                    <div class="event-card" data-aos="fade-up">
+                        <div class="event-icon">💒</div>
+                        <h3 class="event-name" data-en="The Ceremony" data-ar="مراسم الزفاف">The Ceremony</h3>
+                        <div class="event-detail">
+                            <span class="detail-icon">📅</span>
+                            <span data-en="Friday, May 8, 2026" data-ar="الجمعة، ٨ مايو ٢٠٢٦">Friday, May 8, 2026</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-icon">🕐</span>
+                            <span data-en="5:00 PM" data-ar="٥:٠٠ مساءً">5:00 PM</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-icon">📍</span>
+                            <span data-en="The Grand Palace, Cairo" data-ar="القصر الكبير، القاهرة">The Grand Palace, Cairo</span>
+                        </div>
+                        <a href="https://maps.google.com/?q=30.0444,31.2357" target="_blank" rel="noopener noreferrer" class="event-map-btn" data-en="View on Map" data-ar="عرض على الخريطة">View on Map</a>
+                    </div>
+
+                    <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="event-icon">🎉</div>
+                        <h3 class="event-name" data-en="The Reception" data-ar="حفل الاستقبال">The Reception</h3>
+                        <div class="event-detail">
+                            <span class="detail-icon">📅</span>
+                            <span data-en="Friday, May 8, 2026" data-ar="الجمعة، ٨ مايو ٢٠٢٦">Friday, May 8, 2026</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-icon">🕐</span>
+                            <span data-en="7:00 PM" data-ar="٧:٠٠ مساءً">7:00 PM</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-icon">📍</span>
+                            <span data-en="The Grand Palace Garden, Cairo" data-ar="حديقة القصر الكبير، القاهرة">The Grand Palace Garden, Cairo</span>
+                        </div>
+                        <a href="https://maps.google.com/?q=30.0444,31.2357" target="_blank" rel="noopener noreferrer" class="event-map-btn" data-en="View on Map" data-ar="عرض على الخريطة">View on Map</a>
+                    </div>
+                </div>
+
+                <!-- Embedded Map -->
+                <div class="map-container" data-aos="fade-up">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.2!2d31.2357!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzM5LjgiTiAzMcKwMTQnMDguNSJF!5e0!3m2!1sen!2seg!4v1"
+                        width="100%" height="350" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Wedding Venue Location">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== GALLERY SECTION ===== -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2 class="section-title" data-en="Our Gallery" data-ar="معرض صورنا">Our Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <div class="gallery-placeholder">
+                            <span>📸</span>
+                            <p data-en="Photo 1" data-ar="صورة ١">Photo 1</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item tall" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="gallery-placeholder">
+                            <span>📸</span>
+                            <p data-en="Photo 2" data-ar="صورة ٢">Photo 2</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="gallery-placeholder">
+                            <span>📸</span>
+                            <p data-en="Photo 3" data-ar="صورة ٣">Photo 3</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item wide" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="gallery-placeholder">
+                            <span>📸</span>
+                            <p data-en="Photo 4" data-ar="صورة ٤">Photo 4</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="gallery-placeholder">
+                            <span>📸</span>
+                            <p data-en="Photo 5" data-ar="صورة ٥">Photo 5</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="gallery-placeholder">
+                            <span>📸</span>
+                            <p data-en="Photo 6" data-ar="صورة ٦">Photo 6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== RSVP SECTION ===== -->
+        <section class="rsvp-section" id="rsvp">
+            <div class="container">
+                <h2 class="section-title" data-en="RSVP" data-ar="تأكيد الحضور">RSVP</h2>
+                <p class="section-subtitle" data-en="We would be honored by your presence" data-ar="يشرفنا حضوركم">We would be honored by your presence</p>
+
+                <form id="rsvpForm" class="rsvp-form" data-aos="fade-up">
+                    <div class="form-group">
+                        <label for="guestName" data-en="Your Name" data-ar="اسمك">Your Name</label>
+                        <input type="text" id="guestName" name="guestName" required
+                               data-placeholder-en="Enter your full name"
+                               data-placeholder-ar="أدخل اسمك الكامل"
+                               placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attendance" data-en="Will you attend?" data-ar="هل ستحضر؟">Will you attend?</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="" data-en="Select..." data-ar="اختر...">Select...</option>
+                            <option value="yes" data-en="Joyfully Accept" data-ar="أقبل بسعادة">Joyfully Accept</option>
+                            <option value="no" data-en="Regretfully Decline" data-ar="أعتذر بأسف">Regretfully Decline</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests" data-en="Number of Guests" data-ar="عدد الضيوف">Number of Guests</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" data-en="Message for the Couple" data-ar="رسالة للعروسين">Message for the Couple</label>
+                        <textarea id="message" name="message" rows="4"
+                                  data-placeholder-en="Write your wishes..."
+                                  data-placeholder-ar="اكتب أمنياتك..."
+                                  placeholder="Write your wishes..."></textarea>
+                    </div>
+
+                    <button type="submit" class="rsvp-submit-btn" data-en="Send RSVP" data-ar="إرسال التأكيد">Send RSVP</button>
+                </form>
+
+                <div id="rsvpSuccess" class="rsvp-success hidden">
+                    <div class="success-icon">✓</div>
+                    <h3 data-en="Thank You!" data-ar="شكراً لكم!">Thank You!</h3>
+                    <p data-en="Your response has been recorded. We look forward to celebrating with you!" data-ar="تم تسجيل ردكم. نتطلع للاحتفال معكم!">Your response has been recorded. We look forward to celebrating with you!</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== WISHES / GUESTBOOK SECTION ===== -->
+        <section class="wishes-section" id="wishes">
+            <div class="container">
+                <h2 class="section-title" data-en="Guest Wishes" data-ar="أمنيات الضيوف">Guest Wishes</h2>
+
+                <div class="wishes-list" id="wishesList">
+                    <div class="wish-card" data-aos="fade-up">
+                        <div class="wish-avatar">M</div>
+                        <div class="wish-content">
+                            <h4>Mohamed</h4>
+                            <p data-en="Wishing you a lifetime of love and happiness! Congratulations!" data-ar="أتمنى لكما حياة مليئة بالحب والسعادة! مبروك!">Wishing you a lifetime of love and happiness! Congratulations!</p>
+                        </div>
+                    </div>
+                    <div class="wish-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="wish-avatar">N</div>
+                        <div class="wish-content">
+                            <h4>Nour</h4>
+                            <p data-en="So happy for you both! May your journey together be filled with joy." data-ar="سعيدة جداً لكما! أتمنى أن تكون رحلتكما مليئة بالفرح.">So happy for you both! May your journey together be filled with joy.</p>
+                        </div>
+                    </div>
+                    <div class="wish-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="wish-avatar">O</div>
+                        <div class="wish-content">
+                            <h4>Omar</h4>
+                            <p data-en="What a beautiful couple! Wishing you all the best on your special day." data-ar="يا لكما من ثنائي جميل! أتمنى لكما الأفضل في يومكما المميز.">What a beautiful couple! Wishing you all the best on your special day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-names">Ahmed & Sara</div>
+                <p class="footer-date" data-en="May 8, 2026 • Cairo, Egypt" data-ar="٨ مايو ٢٠٢٦ • القاهرة، مصر">May 8, 2026 • Cairo, Egypt</p>
+                <div class="footer-hearts">♥ ♥ ♥</div>
+                <p class="footer-thanks" data-en="Thank you for being part of our story" data-ar="شكراً لكونكم جزءاً من قصتنا">Thank you for being part of our story</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
